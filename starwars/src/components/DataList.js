@@ -23,7 +23,7 @@ export default function SWAPIData() {
         <Row>
             {data.map(data =>{
                 return(
-<CharCard key={data.id} name={data.name} height={data.height} mass={data.mass} eyeColor={data.eye_color} />
+<CharCard key={data.id} name={data.name} height={data.height} mass={data.mass} eye_color={data.eye_color} />
 
                 )
             })}
