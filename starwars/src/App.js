@@ -1,21 +1,8 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from 'react';
 import './App.css';
+import SWAPIData from "./components/DataList";
 
-export default function App() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    axios
-    .get("https://swapi.co/api/people/")
-    .then(res => {
-        const info = res.data.results;
-        console.log(info);
-setData(info);
-    })
-    .catch(error =>{
-        console.log("SWAPI not returned:", error);
-    });
-  }, []);
+const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -26,6 +13,9 @@ setData(info);
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      <SWAPIData/>
     </div>
   );
 }
+
+export default App;
