@@ -26,13 +26,25 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React is a UI tool library created by Facebook. It’s a JS library that specializes in rendering UI in the browser. It is declarative, component based and can be used as much or a little as needed in a project. Components can be written in JSX syntax in which the html elements and JS functionality are written together within the component. Frameworks and libraries are created to help developers build large scale applications effectively. 
+
+React solves the problem of selecting each piece of the DOM and adding an eventListener on each one to make the application responsive to data changes during the use of the app. In React, we interact with a virtual DOM instead to more efficiently facilitate the actions we want the page to preform. React monitors if there have been any changes by the user to the page (state changes), and renders them on the DOM. This happens much faster because React does not reload the whole DOM when there has been a state change, it only updates the component that has been changed through it’s virtual DOM.
+
 - [ ] What does it mean to _think_ in react?
+
+Use expected incoming data structure to create a component based design, considering what props and state will be passed to/ or ‘owned by’ each element/component.
 
 - [ ] Describe state.
 
+State is a plain JS Object that affects how the component is rendered on the page. It is managed within a component similar to how variables declared within a function. An example is a light bulb with state isOn being either true or false.
+
 - [ ] Describe props.
 
+Also a plain JS Object that affects how the component is rendered on the page, props (short for properties) are JS Objects that get passed to the component like a function parameter.
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+A side effect is anything that affects something outside the scope of the function being executed. Examples are fetching API data, timers etc. A side effect is something that can cause a component to return a different output for the same state and props. The Effect hook —> useEffect(()=>{}); is a tool for managing side effects. Side effects can be synced with state or props changes by passing in a dependency array (for prop or state changes) as the second argument to the effect hook. 
 
 ## Project Set Up
 
@@ -60,12 +72,12 @@ Follow these steps for completing your project:
 
 Your finished project must include all of the following requirements:
 
-- [ ] Fetch a list of Star Wars characters from the [Star Wars API (or SWAPI)](https://swapi.co/) and render them to the screen. 
-- [ ] Follow the documentation to learn how to fetch a list of "people". However, don't spend _too_ long on this. Here is a link for you to follow if you've looked around the docs for about 15 minutes or so and haven't found where to go - [Secret Link to Awesomeness 🤫](https://swapi.co/documentation#people).
-- [ ] Set the data you fetch to state.
-- [ ] Map over the list and render a component for each character on the page.
-- [ ] You must display at least one element for each star wars character in the data set.
-- [ ] The elements must be styled with either Reactstrap or styled-components - don't rely on browser default styles.
+- [ x ] Fetch a list of Star Wars characters from the [Star Wars API (or SWAPI)](https://swapi.co/) and render them to the screen. 
+- [ x ] Follow the documentation to learn how to fetch a list of "people". However, don't spend _too_ long on this. Here is a link for you to follow if you've looked around the docs for about 15 minutes or so and haven't found where to go - [Secret Link to Awesomeness 🤫](https://swapi.co/documentation#people).
+- [ x ] Set the data you fetch to state.
+- [ x ] Map over the list and render a component for each character on the page.
+- [ x ] You must display at least one element for each star wars character in the data set.
+- [ x ] The elements must be styled with either Reactstrap or styled-components - don't rely on browser default styles.
 
 #### Required best practices:
 
