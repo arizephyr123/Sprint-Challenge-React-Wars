@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import './App.css';
 
-const App = () => {
+export default function App() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios
+    .get("https://swapi.co/api/people/")
+    .then(res => {
+        const info = res.data.results;
+        console.log(info);
+setData(info);
+    })
+    .catch(error =>{
+        console.log("SWAPI not returned:", error);
+    });
+  }, []);
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -15,5 +29,3 @@ const App = () => {
     </div>
   );
 }
-
-export default App;
